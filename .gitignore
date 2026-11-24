@@ -1,0 +1,14 @@
+# Archivos de sistema y temporales
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Copias de seguridad y descargas
+*.zip
+*copy*
+*(1)*
+
+# Dependencias futuras
+node_modules/
+.next/
