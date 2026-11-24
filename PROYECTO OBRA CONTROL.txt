@@ -1,0 +1,394 @@
+PROYECTO: OBRA CONTROL
+Desarrollo de una aplicación profesional de gestión y seguimiento de obras
+
+Quiero que asumas el papel de arquitecto de software, diseñador UX/UI y desarrollador full-stack senior. Vamos a desarrollar conjuntamente una aplicación web llamada OBRA CONTROL, partiendo del prototipo que te adjunto.
+
+Tu misión es continuar el desarrollo de este proyecto, mejorar el código existente y convertirlo progresivamente en una aplicación profesional, funcional y fiable.
+
+No quiero que te limites a darme explicaciones, recomendaciones o fragmentos de código. Quiero que desarrolles la aplicación, generes los archivos necesarios, pruebes su funcionamiento y me entregues versiones ejecutables.
+
+1. OBJETIVO DEL PROYECTO
+
+OBRA CONTROL será una aplicación web privada para gestionar y realizar el seguimiento integral de las obras de una empresa constructora especializada principalmente en:
+
+Reformas de locales comerciales.
+Reformas de viviendas.
+Acondicionamiento de espacios comerciales.
+Obras de reforma y rehabilitación.
+
+La aplicación será inicialmente para uso personal. Yo seré el único usuario y responsable del seguimiento de las obras.
+
+Actualmente utilizo Excel para elaborar los plannings de obra. Es fundamental que la aplicación permita importar estos archivos y trabajar con ellos sin tener que cambiar radicalmente mi metodología actual.
+
+Quiero poder controlar desde un único lugar:
+
+Planificación y ejecución de obras.
+Contratación de subcontratas.
+Pedidos y suministro de materiales.
+Trabajos realizados e incidencias.
+Actas de reuniones de obra.
+Compromisos y tareas pendientes.
+Agenda y recordatorios.
+Estado general de todas las obras.
+
+La aplicación debe funcionar correctamente tanto en ordenador como en móvil mediante navegador.
+
+El idioma de toda la aplicación será español.
+
+2. ARCHIVO DE PARTIDA
+
+Te adjunto el prototipo inicial de OBRA CONTROL desarrollado en HTML, CSS y JavaScript.
+
+Debes:
+
+Inspeccionar todos los archivos.
+Analizar su arquitectura y funcionamiento.
+Revisar el código existente.
+Identificar errores y limitaciones.
+Aprovechar todo lo que sea válido.
+Evitar reconstruir desde cero aquello que ya funciona correctamente.
+
+El prototipo contiene:
+
+Dashboard general.
+Alta y edición de obras.
+Planning y Gantt simplificado.
+Importación Excel/CSV con correspondencia de columnas.
+Seguimiento de actividades.
+Subcontratas.
+Pedidos y materiales.
+Diario de obra.
+Actas y compromisos.
+Agenda y alertas.
+
+Incluye datos ficticios de demostración. Deben permanecer claramente identificados como tales.
+
+3. FILOSOFÍA DE DESARROLLO
+
+Quiero una aplicación práctica, profesional, intuitiva y sencilla.
+
+No quiero un ERP complejo ni una herramienta excesivamente burocrática.
+
+La prioridad es que pueda abrir la aplicación por la mañana y saber rápidamente:
+
+Qué obras tengo activas.
+Qué trabajos están retrasados.
+Qué trabajos deberían empezar próximamente.
+Qué subcontratas faltan por contratar.
+Qué materiales tengo que pedir.
+Qué materiales están pendientes de recibir.
+Qué compromisos tengo pendientes.
+Qué asuntos debo resolver hoy.
+
+Cada tarea, pedido, contratación o compromiso debe poder relacionarse con una obra y tener fechas, estado y observaciones.
+
+Evita duplicar información y diseña correctamente las relaciones entre módulos.
+
+4. MÓDULOS DE LA APLICACIÓN
+A. DASHBOARD GENERAL
+
+Debe ser la pantalla inicial.
+
+Incluir:
+
+Número de obras activas.
+Porcentaje de avance de cada obra.
+Obras retrasadas.
+Actividades pendientes.
+Contrataciones pendientes.
+Pedidos que hay que realizar.
+Materiales pendientes de entrega.
+Próximas reuniones.
+Compromisos vencidos.
+Alertas importantes.
+
+Debe existir una vista general de todas las obras y acceso directo a cada una.
+
+B. GESTIÓN DE OBRAS
+
+Cada obra tendrá una ficha individual con:
+
+Nombre.
+Cliente.
+Dirección.
+Tipo de obra.
+Fecha de inicio.
+Fecha de finalización prevista.
+Estado.
+Observaciones.
+Documentación asociada.
+
+Cada obra tendrá sus propios módulos de planificación, subcontratas, compras, diario, actas y documentos.
+
+C. PLANNING DE OBRA
+
+Este es uno de los módulos más importantes.
+
+Debe permitir:
+
+Importar planning desde Excel.
+Importar archivos CSV.
+Configurar la correspondencia entre columnas.
+Previsualizar los datos antes de importar.
+Identificar capítulos, partidas y actividades.
+Mostrar el planning en formato Gantt.
+Crear y modificar actividades manualmente.
+Registrar fechas previstas y reales.
+Registrar porcentajes de ejecución.
+Identificar hitos.
+Detectar retrasos.
+Calcular desviaciones.
+Consultar el avance previsto frente al avance real.
+Requisito crítico: planificación base y seguimiento real
+
+La planificación original debe mantenerse separada del seguimiento real.
+
+No se debe modificar silenciosamente el planning base ni perder información cuando se importe una nueva versión de Excel.
+
+Al reimportar:
+
+Detectar actividades existentes.
+Identificar actividades nuevas.
+Identificar actividades modificadas.
+Identificar actividades eliminadas del archivo nuevo.
+Mostrar las diferencias.
+Solicitar confirmación antes de aplicar cambios.
+Conservar el historial de versiones.
+Nunca sobrescribir automáticamente fechas reales, porcentajes ejecutados, observaciones o datos de seguimiento.
+
+Quiero poder comparar el planning original con las modificaciones posteriores.
+
+El Gantt debe mostrar claramente la planificación inicial y el avance real.
+
+D. SUBCONTRATAS Y CONTRATACIONES
+
+Debe existir un registro de empresas y gremios.
+
+Cada contratación incluirá:
+
+Gremio.
+Empresa.
+Persona de contacto.
+Teléfono y correo.
+Presupuesto solicitado.
+Importe adjudicado.
+Fecha de solicitud.
+Fecha de contratación.
+Fecha prevista de comienzo.
+Fecha prevista de finalización.
+Estado de contratación.
+Documentación.
+Observaciones.
+
+Estados posibles:
+
+Por solicitar.
+Presupuesto solicitado.
+Presupuesto recibido.
+Pendiente de adjudicación.
+Contratada.
+Finalizada.
+
+Debe avisarme cuando un gremio tenga que empezar próximamente y todavía no esté contratado.
+
+E. COMPRAS Y MATERIALES
+
+Cada pedido debe incluir:
+
+Obra.
+Material.
+Descripción.
+Proveedor.
+Cantidad.
+Unidad.
+Precio opcional.
+Fecha límite para solicitar el pedido.
+Fecha necesaria en obra.
+Plazo de suministro.
+Fecha prevista de entrega.
+Fecha real de recepción.
+Estado.
+Observaciones.
+
+Debe poder relacionarse cada pedido con una actividad del planning.
+
+Quiero alertas cuando un pedido deba realizarse y cuando un material no haya llegado en la fecha necesaria.
+
+F. DIARIO DE OBRA
+
+Registro de visitas y jornadas de trabajo:
+
+Fecha.
+Empresas presentes.
+Trabajos realizados.
+Incidencias.
+Fotografías.
+Observaciones.
+Trabajos pendientes.
+
+Debe ser muy sencillo registrar información desde el móvil.
+
+G. ACTAS Y REUNIONES
+
+Cada acta debe incluir:
+
+Obra.
+Fecha.
+Asistentes.
+Temas tratados.
+Acuerdos.
+Compromisos.
+Responsable.
+Fecha límite.
+Estado de cumplimiento.
+
+Cada compromiso debe convertirse en una tarea de seguimiento y aparecer en la agenda.
+
+Debe poder generarse un PDF profesional del acta.
+
+H. AGENDA Y ALERTAS
+
+Centralizar las tareas y compromisos procedentes de todos los módulos.
+
+Debe mostrar:
+
+Tareas de hoy.
+Tareas de los próximos siete días.
+Compromisos vencidos.
+Pedidos pendientes.
+Contrataciones urgentes.
+Hitos próximos.
+Reuniones programadas.
+5. TECNOLOGÍA Y ARQUITECTURA
+
+La arquitectura objetivo que quiero estudiar es:
+
+Frontend: Next.js.
+Diseño: Tailwind CSS.
+Base de datos: Supabase/PostgreSQL.
+Almacenamiento: Supabase Storage.
+Hosting: Vercel, si posteriormente autorizo el despliegue.
+
+Sin embargo, no debes asumir que estas tecnologías son obligatorias para el primer prototipo.
+
+Primero evalúa qué herramientas tienes realmente disponibles en tu entorno de trabajo.
+
+Requisitos:
+
+Priorizar herramientas gratuitas y de código abierto.
+No contratar servicios.
+No publicar la aplicación.
+No conectar servicios externos.
+No utilizar credenciales reales.
+No desplegar nada sin mi autorización expresa.
+
+Si el entorno permite ejecutar una aplicación local, quiero poder probarla directamente.
+
+La aplicación deberá estar preparada para evolucionar hacia una base de datos central y sincronización entre dispositivos.
+
+6. DISEÑO VISUAL
+
+Quiero una interfaz profesional, limpia y moderna.
+
+Características:
+
+Idioma español.
+Diseño responsive.
+Navegación lateral.
+Dashboard visual.
+Tablas claras.
+Formularios sencillos.
+Colores sobrios.
+Verde oscuro como color corporativo principal.
+Indicadores visuales de retrasos y alertas.
+Uso cómodo desde móvil.
+
+No quiero una interfaz recargada.
+
+Debe transmitir la sensación de una herramienta profesional de dirección y control de obras.
+
+7. METODOLOGÍA DE TRABAJO
+
+Quiero que trabajemos por fases.
+
+Fase 1. Auditoría y mejora del prototipo
+Inspeccionar el archivo adjunto.
+Revisar el código.
+Detectar errores.
+Mejorar la interfaz.
+Revisar la persistencia de datos.
+Comprobar los módulos existentes.
+Fase 2. Planning e importador Excel
+
+Prioridad máxima.
+
+Quiero un importador robusto, con detección de columnas, previsualización, correspondencia configurable, detección de cambios e historial de versiones.
+
+Fase 3. Gestión completa de obras
+
+Mejorar fichas, dashboard y navegación.
+
+Fase 4. Subcontratas y compras
+
+Desarrollar las relaciones entre planning, gremios, pedidos y materiales.
+
+Fase 5. Diario y actas
+
+Incorporar seguimiento documental y compromisos.
+
+Fase 6. Agenda y alertas
+
+Centralizar toda la información pendiente.
+
+Fase 7. Pruebas y estabilización
+
+Comprobar el funcionamiento integral.
+
+No quiero que sacrifiques la calidad por intentar terminar todos los módulos rápidamente.
+
+8. REGLAS IMPORTANTES
+No inventes que una funcionalidad está terminada si no funciona.
+No afirmes que has probado algo que no has ejecutado.
+Comprueba los archivos generados.
+No elimines funcionalidades existentes sin explicarlo.
+Mantén una estructura de código ordenada y mantenible.
+Evita dependencias innecesarias.
+Prioriza la seguridad y la protección de los datos.
+Conserva los datos existentes cuando se actualice una versión.
+No publiques ni despliegues nada sin autorización.
+No me entregues únicamente ejemplos de código: desarrolla los archivos reales.
+
+Cuando hagas cambios importantes, explícame qué has modificado y cómo probarlo.
+
+9. FORMA DE TRABAJAR CONMIGO
+
+Quiero que actúes como colaborador técnico durante todo el desarrollo.
+
+No quiero tener que definir cada detalle técnico.
+
+Toma decisiones razonables cuando sean decisiones de implementación, pero consúltame cuando afecten a la forma de trabajar de la constructora o a funcionalidades importantes.
+
+Si necesitas un archivo Excel real para adaptar el importador, pídemelo.
+
+Si encuentras problemas en el código existente, corrígelos y explícame el motivo.
+
+No me hagas largas listas de preguntas antes de comenzar. Avanza con lo que tienes y consulta únicamente cuando sea imprescindible.
+
+10. PRIMERA TAREA
+
+Empieza ahora.
+
+Primero inspecciona el ZIP adjunto y realiza una auditoría técnica.
+
+Después:
+
+Explícame brevemente el estado del prototipo.
+Identifica los problemas prioritarios.
+Propón la arquitectura más adecuada para continuar.
+Comprueba qué puedes ejecutar en tu entorno.
+Empieza a mejorar el prototipo, priorizando dashboard, obras y planning/importador Excel.
+Genera una nueva versión ejecutable.
+Comprueba que funciona.
+Entrégame los archivos y las instrucciones para probarlos.
+
+IMPORTANTE: No quiero quedarme en la fase de planificación. Quiero que empieces a construir OBRA CONTROL de verdad y que vayamos evolucionándolo hasta tener una aplicación profesional que pueda utilizar diariamente para gestionar mis obras.
