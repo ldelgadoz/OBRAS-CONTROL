@@ -48,13 +48,15 @@ obra-control/
 ## Estado del desarrollo
 
 1. **Fase 0 (Completada):** Prototipo inicial en HTML/JS local.
-2. **Fase 1 (En curso):** Auditoría técnica, reestructuración y definición de arquitectura.
-3. **Fase 2:** Importador de Excel/CSV con detección de cambios y control de versiones.
+2. **Fase 1 (Completada):** Auditoría técnica, reestructuración del prototipo en módulos, capa de datos con migración y copias de seguridad, corrección de errores detectados.
+3. **Fase 2 (Completada en el prototipo):** Importador de Excel/CSV con detección de cambios, línea base separada del seguimiento real y control de versiones. Pendiente de validar con un Excel real.
 4. **Fase 3:** Fichas de obra completas y visualización Gantt avanzada.
 5. **Fase 4:** Integración de subcontratas y compras.
 6. **Fase 5:** Diario de obra y generación de actas en PDF.
 7. **Fase 6:** Centralización de agenda y persistencia en Supabase.
 8. **Fase 7:** Pruebas de integración y estabilización.
+
+El prototipo ejecutable está en [`obra_control_prototipo/`](obra_control_prototipo/README.md) (abre `index.html`). La estructura de arriba (Next.js) es la arquitectura objetivo, todavía no creada.
 
 ## Licencia
 
